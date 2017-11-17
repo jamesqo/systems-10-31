@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
         printf("argv[%lu]: %s\n", index, argv[index]);
     }
 
-    char* target = argc > 1 ? argv[1] : "Makefile";
+    char* target = argc > 1 ? argv[1] : "/etc/passwd";
     struct stat sb;
     if (stat(target, &sb) == -1) {
         printf("error: %s\n", strerror(errno));
